@@ -1,0 +1,9 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  ip: Update staging server
+  entrypoint: /bin/sh
+  args:
+  - '-c'
+  - |
+    set -x && \
+    gcloud compute ssh instance-1 --zone=europe-north1-a --command=/bin/sh /home/bobdylangsrp/update.sh
