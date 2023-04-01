@@ -23,3 +23,5 @@ module.exports = {
         game.handleInteraction(interaction);
     }
 }
+
+// Testing the new auto commit system.
