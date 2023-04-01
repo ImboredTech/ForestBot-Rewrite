@@ -20,12 +20,12 @@ module.exports = async (client, message) => {
     const messageContent = message.content.toLowerCase();
 
     if(youtubeRegex.test(messageContent) || discordRegex.test(messageContent) || twitchRegex.test(messageContent)) {
-        message.delete();
+        await message.delete();
 
-        message.channel.send(`${message.author}, you can't sned links here!`);
+       await message.channel.send(`${message.author}, you can't sned links here!`);
     } else if(racialSlursRegex.test(messageContent)) {
-        message.delete();
+        await message.delete();
 
-        message.channel.send(`${message.author}, you can't say that word here.`);
+       await message.channel.send(`${message.author}, you can't say that word here.`);
     }
 };
