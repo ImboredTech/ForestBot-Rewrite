@@ -78,28 +78,3 @@ module.exports = {
     name: "help",
     description: "Displays all the commands and their description."
 }
-function createButtonRow(currentPage, maxPages) {
-    const buttonRow = new ActionRowBuilder();
-
-    const backButton = new ButtonBuilder()
-        .setCustomId("back")
-        .setLabel("Back")
-        .setStyle(1)
-        .setDisabled(currentPage === 1);
-
-    const pageNumber = new ButtonBuilder()
-        .setCustomId("pageNumber")
-        .setLabel(`${currentPage}/${maxPages}`)
-        .setStyle(2)
-        .setDisabled(true);
-
-    const nextButton = new ButtonBuilder()
-        .setCustomId("next")
-        .setLabel("Next")
-        .setStyle(1)
-        .setDisabled(currentPage === maxPages);
-
-    buttonRow.addComponents(backButton, pageNumber, nextButton);
-
-    return buttonRow;
-}
