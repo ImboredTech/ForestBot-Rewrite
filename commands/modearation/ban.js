@@ -103,7 +103,7 @@ module.exports = {
         required: true,
     }, {
         name: "reason",
-        description: "The reason you are banning the user.",
+        description: "The reason why you are banning the user.",
         type: ApplicationCommandOptionType.String,
         required: false,
     }, ],
