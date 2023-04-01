@@ -19,7 +19,7 @@ module.exports = {
         },
     ],
 
-    callback: async (client, Interaction) => {
+    callback: async (client, interaction) => {
         game.handleInteraction(interaction);
     }
 }
