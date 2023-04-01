@@ -11,7 +11,7 @@ module.exports = async (client, message) => {
 
     const data = await AutoMod.findOne({ guildId: guildId});
 
-    if(!result || !result.autoModEnabled) return;
+    if(!data || !data.autoModEnabled) return;
 
     const youtubeRegex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/gi;
     const discordRegex = /(discord\.gg\/|discordapp\.com\/invite\/)/gi;
