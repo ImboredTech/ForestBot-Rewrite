@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { Client, IntentsBitField } = require("discord.js");
+const { REST, Routes, Client, IntentsBitField, Collection} = require("discord.js");
 const mongoose = require("mongoose");
 //const express = require("express");
 //const app = express();
@@ -14,6 +14,8 @@ const client = new Client({
         IntentsBitField.Flags.MessageContent,
     ],
 });
+
+client.commands = new Collection();
 // THE FOLLOWING COMMENTED IMPORTS ARE FOR THE FUTURE DASHBOARD.
 // const cookieParser = require("cookie-parser");
 // const urlencodedParser = require("body-parser").urlencoded({ extended: false });
@@ -58,6 +60,18 @@ module.exports.client = client;
         //console.log(`[Dashboard] - Loaded ${file.name}`);
     //}
 //});
+
+const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
+
+// for guild-based commands
+//rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID), { body: [] })
+	//.then(() => console.log('Successfully deleted all guild commands.'))
+	//.catch(console.error);
+
+// for global commands
+//rest.put(Routes.applicationCommands(process.env.CLIENT_ID), { body: [] })
+	//.then(() => console.log('Successfully deleted all application commands.'))
+	//.catch(console.error);
 
 (async () => {
     try{
