@@ -29,7 +29,7 @@ module.exports = {
             await interaction.editReply(`Tickets have been configured! If you want to disable them then do /ticket-disable`);
         }
     },
-    name: "ticket",
+    name: "ticket-configure",
     description: "Creates an new ticket.",
     options: [{
         name: "roleId",
