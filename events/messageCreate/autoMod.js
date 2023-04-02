@@ -11,13 +11,9 @@ module.exports = async (client, message) => {
 
   const data = await AutoMod.findOne({ guildId: guildId });
 
-  if (!data || !data.automodEnabled) {
-    console.log("Not Enabled.");
-    return;
-  }
+  if (!data || !data.automodEnabled) return;
+  
 
-
-  console.log("enabled");
   const youtubeRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?([-\w]{11})$/gi;
   const discordRegex = /(discord\.gg\/|discordapp\.com\/invite\/)/gi;
   const twitchRegex = /^(?:https?:\/\/)?(?:www\.)?(?:twitch\.tv)\/([a-zA-Z0-9_]{4,25})$/gi;
