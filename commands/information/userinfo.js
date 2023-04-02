@@ -14,8 +14,8 @@ module.exports =
         const targetUserObj = await interaction.guild.members.fetch(targetUserId);
         await interaction.deferReply();
 
-        const accountCreationDate = targetUserObj.createdAt.toDateString();
-        const guildJoinDate = interaction.guild.members.cache.get(targetUserId).joinedAt.toDateString();
+        const accountCreationDate = targetUserObj.createdAt;
+        const guildJoinDate = interaction.guild.members.cache.get(targetUserId).joinedAt;
         const userName = targetUserObj.username;
         const discriminator = targetUserObj.discriminator;
         const avatar = targetUserObj.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 });
