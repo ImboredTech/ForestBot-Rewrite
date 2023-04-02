@@ -10,7 +10,7 @@ module.exports = {
     callback: async (client, interaction) => 
     {
 
-        const roleId = interaction.options.get("roleId").value;
+        const roleId = interaction.options.get("roleid").value;
         await interaction.deferReply();
         const ticketInfo = await TicketInfo.findOne({ guildId: interaction.guild.id });
         if(ticketInfo) {
@@ -32,7 +32,7 @@ module.exports = {
     name: "ticket-configure",
     description: "Creates an new ticket.",
     options: [{
-        name: "roleId",
+        name: "roleid",
         description: "Mention your support role.",
         type: ApplicationCommandOptionType.Role,
         required: true
