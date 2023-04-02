@@ -18,7 +18,7 @@ module.exports = {
         const role = interaction.guild.roles.cache.get(ticketInfo.roleId);
 
         const ticketNumber = Math.floor(Math.random() * 90000) + 10000;
-        const channel = await interaction.guild.channels.create(`ticket-${ticketNumber}.`, {
+        const channel = await interaction.guild.channels.create({ name: `ticket-${ticketNumber}.`, 
             type: 'text',
             permissionOverwrites: [
                 {
