@@ -19,7 +19,7 @@ module.exports = {
 
         const ticketNumber = Math.floor(Math.random() * 90000) + 10000;
         const channel = await interaction.guild.channels.create({ name: `ticket-${ticketNumber}.`, 
-            type: 'text',
+            type: 1,
             permissionOverwrites: [
                 {
                     id: interaction.user.id,
