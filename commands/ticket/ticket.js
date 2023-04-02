@@ -1,4 +1,4 @@
-const { PermissionFlagsBits } = require('discord.js');
+const { PermissionFlagsBits, ChannelType} = require('discord.js');
 const TicketInfo = require('../../models/TicketInfo');
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
 
         const ticketNumber = Math.floor(Math.random() * 90000) + 10000;
         const channel = await interaction.guild.channels.create({ name: `ticket-${ticketNumber}.`, 
-            type: 1,
+            type: ChannelType.GuildText,
             permissionOverwrites: [
                 {
                     id: interaction.user.id,
