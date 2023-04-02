@@ -26,6 +26,8 @@ module.exports = {
             });
             data.save();
             await interaction.editReply("I have enabled auto moderator for this server.");
+        } else if(data || data.automodEnabled) {
+            await interaction.editReply("Automod has already been enabled. If you are trying to disable automod do /automod-disable to disable the automod.");
         }
     }
 };
