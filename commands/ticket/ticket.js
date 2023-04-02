@@ -31,7 +31,7 @@ module.exports = {
                 }
             ],
         });
-        await channel.send(`Hello <@${interaction.member.id}! Please explain your problem and one of our support members will be help you out soon.\n<@&${roleId}>`);
+        await channel.send(`Hello <@${interaction.member.id}! Please explain your problem and one of our support members will be help you out soon.\n<@&${role.id}>`);
         await interaction.editReply(`Your ticket has been created in ${channel}`);
     },
     name: "ticket",
