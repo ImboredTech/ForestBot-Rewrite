@@ -18,14 +18,14 @@ module.exports = {
                 automodEnabled: true,
             });
             newData.save();
-            await interaction.editReply("I have enabled auto moderation for this server.");
+            await interaction.editReply("I have enabled auto moderation for this server. To disable it run the /automod-disable command.");
         } else if(!data.automodEnabled) {
             data.set({
                 guildId: interaction.guild.id,
                 automodEnabled: true,
             });
             data.save();
-            await interaction.editReply("I have enabled auto moderator for this server.");
+            await interaction.editReply("I have enabled auto moderator for this server. To disable it run the /automod-disable command.");
         } else if(data || data.automodEnabled) {
             await interaction.editReply("Automod has already been enabled. If you are trying to disable automod do /automod-disable to disable the automod.");
         }
