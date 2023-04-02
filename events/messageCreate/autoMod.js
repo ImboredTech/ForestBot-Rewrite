@@ -11,7 +11,10 @@ module.exports = async (client, message) => {
 
   const data = await AutoMod.findOne({ guildId: guildId });
 
-  if (!data || !data.autoModEnabled) console.log("Not enabled.");
+  if (!data || !data.autoModEnabled) {
+    console.log("Not Enabled.");
+    return;
+  }
 
 
   console.log("enabled");
