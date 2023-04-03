@@ -1,5 +1,5 @@
 const { Client, Interaction, ApplicationCommandOptionType, PermissionFlagsBits, } = require("discord.js");
-const punishments = require("../../Models/ModSchema");
+const punishments = require("../../models/ModSchema");
 const ms = require("ms");
 const crypto = require("crypto");
 
