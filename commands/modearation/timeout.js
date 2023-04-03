@@ -117,7 +117,7 @@ module.exports = {
             name: "target-user",
             description: "The user you want to timeout.",
             type: ApplicationCommandOptionType.Mentionable,
-            required: TextTrackCueList,
+            required: true,
         },
         {
             name: "duration",
