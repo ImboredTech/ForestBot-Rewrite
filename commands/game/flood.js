@@ -8,8 +8,8 @@ const {
 } = require("discord.js");
 
 module.exports = {
-    name: 'snake',
-    description: "Start an snake game.",
+    name: 'flood',
+    description: "Start an flood game.",
     options: [
         {
             name: "difficulty",
