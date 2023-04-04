@@ -69,7 +69,7 @@ files.forEach(f => {
         console.log("Connected to DB.");
         eventHandler(client);
         client.login(process.env.TOKEN);
-        app.listen(80, () => console.log("App on port 80"));
+        app.listen(90, () => console.log("App on port 90"));
     } catch (error) {
         console.log(`Error: ${error}`);
     }
