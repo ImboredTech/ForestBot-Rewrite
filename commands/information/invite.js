@@ -22,6 +22,8 @@ module.exports = {
             .setColor("Green")
             .setDescription(`:white_check_mark: ${targetUserObj.user.username} has **${i}** invites.`)
 
+        await interaction.editReply({ embeds: [embed] });
+
     },
     name: 'invite',
     description: 'Displays the amount of invites the user entered / your invites.',
