@@ -19,7 +19,7 @@ module.exports = {
         },
     ],
     callback: async(client, interaction) => {
-        diff = interaction.options.get('difficulty').toLowerCase();
+        diff = interaction.options.get('difficulty')
         if(diff === "easy") {
             difficulty = 8;
         } else if(diff === "normal") {
