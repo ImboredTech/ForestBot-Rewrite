@@ -20,6 +20,7 @@ module.exports = {
     ],
     callback: async(client, interaction) => {
         diff = interaction.options.get('difficulty')
+        await interaction.deferReply();
         let difficulty = 0;
         if(diff === "easy") {
             difficulty = 8;
@@ -27,6 +28,8 @@ module.exports = {
             difficulty = 13;
         } else if(diff === "hard") {
             difficulty = 18;
+        } else {
+            await interaction.editReply("Please make sure you enter an valid difficulty. (easy, normal, hard)");
         }
         const Game = new Flood({
             message: interaction,
